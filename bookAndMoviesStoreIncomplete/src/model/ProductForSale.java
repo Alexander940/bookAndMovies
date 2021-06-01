@@ -1,6 +1,6 @@
 package model;
 
-public class ProductForSale extends Product, Saleable{
+public class ProductForSale extends Product implements Saleable{
 
     double discount;
 
@@ -10,13 +10,21 @@ public class ProductForSale extends Product, Saleable{
         discount = 0.0;
     }
 
+    @Override
+    public String getInformation(){
+        String information = "";
+
+        return information;
+    }
+
     public double getSalePrice(int units){
         double subTotal;
 
-        subTotal = getPrice() * units - this.discount;
+        subTotal = getPrice(units) * units - this.discount;
 
         return subTotal;
     }
+
 
     public boolean isSafeSale(int units){
         boolean safe = true;
