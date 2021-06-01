@@ -190,8 +190,8 @@ public class Shop {
 	 *  (numero entre 0 y 1)units int cantidad de unidades a vender
 	 * @return un mensaje con el resultado de la venta
 	 */
-	private  String sale(Saleable p, int units, double discount) {
-		
+	private String sale(Saleable p, int units, double discount) {
+		String message = "";
 		/*
 		 * Para hacer una venta
 		 * 1. Se verifica si es seguro vender, es decir, si
@@ -205,7 +205,7 @@ public class Shop {
 		 * si no: 
 		 *  - Se muestra un mensaje reportando el error.
 		 */
-		return "";
+		return message;
 		
 	}
 	
